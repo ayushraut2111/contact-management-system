@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+    <style>
+        .container{
+            width: 50%;
+           padding: 5px;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 2px 2px 15px rgb(230, 226, 226);
+            margin: 0 auto;
+            text-align: center;
+        }
+        .box{
+            border: 2px solid blue;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Search contact</h1>
+    <div class="main">
+        <form  class="container" action="/search" method="post">
+            {% csrf_token %}
+            <h3>Name:-</h3>
+            <input type="text" name="name">
+            <br><br>
+            <button class=".btn" type="submit">Search contact</button>
+            <h3>{{msg}}</h3>
+            <button><a class="btn" href="/">Home</a></button>
+        </form>
+        {% for i in contact %}
+        <h3 class="box">
+            {{name}}{{i.name}} | {{phone}}{{i.phone}} | {{email}}{{i.email}} | {{address}}{{i.address}}
+        </h3>
+        {% endfor %}
+</body>
+</html>

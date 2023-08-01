@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add contacts</title>
+    <style>
+        .container{
+            width: 50%;
+           padding: 5px;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 2px 2px 15px rgb(230, 226, 226);
+            margin: 0 auto;
+            text-align: center;
+            
+
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Add contact</h1>
+
+    <div class="main">
+        <form  class="container" action="/add" method="post">
+            {% csrf_token %}
+            <h3 >Name:-</h3>
+            <input type="text" name="name">
+            <h3>phone number:-</h3>
+            <input type="number" name="number">
+            <h3>Email Address:-</h3>
+            <input type="text" name="email">
+            <h3>Address:-</h3>
+            <input type="text" name="address">
+            <br><br>
+            <button class=".btn" type="submit">Add contact</button>
+            <br><br>
+            <button><a class="btn" href="/">Home</a></button>
+
+        </form>
+
+    </div>
+</body>
+</html>

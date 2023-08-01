@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View All Contacts</title>
+    <style>
+        .container{
+           padding: 5px;
+        }
+        .btn{
+            width: 5cm;
+            margin-left: 40%;
+        }
+        .box{
+            border: 2px solid blue;
+        }
+    </style>
+</head>
+<body class="container">
+    <h3>{{msg}}</h3>
+    {% for i in contact %}
+    <h3 class="box">
+        {{i.id}}{{name}}{{i.name}} | {{phone}}{{i.phone}} | {{email}}{{i.email}} | {{address}}{{i.address}}
+    </h3>
+    {% endfor %}
+    <button class="btn"><a  href="/">Home</a></button>
+    
+</body>
+</html>

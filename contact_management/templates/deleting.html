@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete</title>
+    <style>
+        .container{
+            width: 50%;
+           padding: 5px;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 2px 2px 15px rgb(230, 226, 226);
+            margin: 0 auto;
+            text-align: center;
+        }
+        .btn{
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1 style="text-align: center;">Delete contact</h1>
+    <div class="main">
+        <form  class="container" action="/delete" method="post">
+            {% csrf_token %}
+            <h3>Name:-</h3>
+            <input type="text" name="name">
+            <br><br>
+            <button class=".btn" type="submit">Delete contact</button>
+            <h3>{{msg}}</h3>
+            <button><a class="btn" href="/">Home</a></button>
+            
+        </form>
+        
+</body>
+</html>
