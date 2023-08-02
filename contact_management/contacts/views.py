@@ -11,8 +11,11 @@ def add(request):
         pnumber=request.POST.get("number")
         email=request.POST.get("email")
         addrs=request.POST.get("address")
-        contacts.objects.create(name=name,phone=pnumber,email=email,address=addrs)
-        return redirect('/')
+        if contacts.objects.filter(phone=pnumber).exists():
+            return render(request,'adding.html',{'msg':'This number is already present in the contact list'})
+        else:
+            contacts.objects.create(name=name,phone=pnumber,email=email,address=addrs)
+            return redirect('/')
     else:
         return render(request,'adding.html')
 
