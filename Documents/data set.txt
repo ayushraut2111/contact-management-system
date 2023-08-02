@@ -1,0 +1,5 @@
+1. Name=anish  Phone= +91-9675447868  Email=anish@gmail.com  Address=Bangalore,Karnataka
+2. Name=Ayush  Phone= +91-9065771273  Email=ayush@gmail.com  Address=bangalore
+3. Name=shivam  phone= +91-8954679925  Email=shivam@gmail.com  Address=kotdwar,uttarakhand
+4. Name=arvind phone= +91-7625378197  Email=arvind@gmail.com  Address=west bengal army unit
+5. Name=neha  phone= +91-7456882396  Email=nneha@gmail.com  Address=house no.xyz,bangalore,karnataka

@@ -1,0 +1,53 @@
+This is a contact management system that allows user to add,delete,search and view all the contacts. This project is made with the help of Django framework.
+
+The django project name is contact_management and inside this i have created django app named contacts and i have done all the coding part inside this contact app and the frontend html files are stored in templates folder.
+
+Frontend part :-
+
+1. The frontend includes one home page that includes all the tabs for performing different actions.
+
+2. For adding,deleting,searching and viewing all the contacts i have created 4 different web pages from where user can perform different actions.
+
+3. For getting input from the user i have used HTML form and with the help of post method i fetched the response in the django functions.
+
+Backend part :-
+
+1. Inside models.py all the tables created for database are kept and for this project i have only created one table named contacts which includes name,phone no.,email address and address as their attributes.
+
+2. Inside urls.py there are all the urls which we have created for accessing different web pages. so whenever url is changed it first comes into urls.py and from there it checks which function this url has to call in views.py and then it goes to that fucntion and executes all the code written in that function.
+
+3. Every function for adding,deleting,searching and viewing the contacts is written inside views.py and database table is also imported in views.py to add delete or search from the database.
+
+Views.py contains 5 functions, we will understand them one by one :-
+
+1. home function ==== when our project starts it will call this function and this function will render home.html page which includes the tabs for performing different actions.
+
+2. add function ==== after getting into create contacts page this function is called by the url '/add', create contacts page contains a html form for taking all the inputs from the user and after taking input from the user this functioin first checks whether it is the input given by the user or user accessed this page. If the user has accessed the create contact page then it goes into the else condition and that page is rendered otherwise it goes into the if condition and inside this first it checks whether the phone number is already present in contact list or not if not then it saves all the user inputs in a variables and then creates a table entry with all the inputs and saves it in the database. After saving the entries in the database it redirects to home page.
+
+3. delete function ===== after getting into delete contact page this function is called, again it first check whether it is the input given by the user or the page is loaded. If the user has given the input to delete the user by name, it first saves the input given by user in a variable name, then it checks whether any contacts with this name is available or not. If user is availabe by this name then it filters out the user with this name and deletes it and after deleting the user it redirects to the home page.
+If there is no user with the given name then it shows a error message to user.
+
+4. search function ==== when user request for serach contact page this function is called and again it first checks whether it is the input given by the user, if yes then 
+it first saves the input given by the user in any variable and checks whether the user is present in the contacts(database) or not if the user is present then it saves the information of the user(whole row of table) inside a variable c. Then it creates a dictionary to be passed in the html file for showing the output to the user and then it renders that page with the output.
+If there is no user then it shows the error.
+
+5. view function ===== when user request for the view all contacts then this function is called and it first checks whether there is any contacts in the database or not if it is not present then it will show the error, otherwise it fetches all the users into a variable c and then pass it into dictionary to send it to html file for showing output to the user and then the html file will read this dictionary and show input to the user.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
